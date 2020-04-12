@@ -28,11 +28,11 @@ clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agre
 <form>
   <label for="fname">What Do We Call You?</label><br>
   <input type="text" id="fname" name="fname" placeholder="Anouska"><br>
-  <button onclick="sendClevertap_event">Tell Us</button>
+  <button onclick="sendClevertap_event()">Tell Us</button>
 
 
   <script type="text/javascript">
-  function sendClevertap_event(e) {
+  function sendClevertap_event() {
           var firstname = document.getElementById('fname');
 
              clevertap.event.push(Event, {
