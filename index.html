@@ -2,8 +2,6 @@
 <html>
 <head>
 	
-  <script src="https://s3-eu-west-1.amazonaws.com/static.wizrocket.com/js/sw_webpush.js"</script>
-
   <script type="text/javascript">
      var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
 
@@ -53,6 +51,10 @@ clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agre
 
 <h1>Hey There </h1>
 <p>Curiosity is a cool drug</p>
+	
+	  <button onclick="Clevertap_notification()">Notification</button>
+
+	
 <form>
   <label for="fname">What Do We Call You?</label><br>
   <input type="text" id="fname" name="fname" placeholder="Anouska"><br>
@@ -72,6 +74,8 @@ console.log("here");
 </script>
 
 <script type="text/javascript">
+	function Clevertap_notification(e) {
+	
 
 clevertap.notifications.push({
     "titleText":Hi There,
@@ -79,7 +83,7 @@ clevertap.notifications.push({
     "okButtonText":Ok,
     "rejectButtonText":No,
     "okButtonColor":"#46bb00"});
-
+	}
     </script>
 
 </body>
