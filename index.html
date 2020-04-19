@@ -48,20 +48,38 @@ clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agre
   </script>
 
 
-
-<h1>Hey There </h1>
-<p>Curiosity is a cool drug</p>
+<style>
 	
-	  <button onclick="Clevertap_notification()">Notification</button>
+body {background-color: White;}
+h1   {color: black;
+		text-align:center}
+p    {color: black;
+		text-align:left}
+        form {text-align:center;
+        }
+	</style>
+
+	<p>Event Data</p>
+       <h1>Profile Data</h1>
+
+	
 
 	
 <form>
-  <label for="fname">What Do We Call You?</label><br>
-  <input type="text" id="fname" name="fname" placeholder="Anouska"><br>
-  <button onclick="sendClevertap_event()">Tell Us</button>
+  <label for="fname" style = "font-family:verdana;">Your Name:</label>
+  <input type="text" id="fname" name="fname" placeholder="Anouska"> <br>
+  
+  </br>
+	<label for="email" style = "font-family:verdana;">Your Email:</label>
+       <input type="email" id="email" name="email" placeholder=me@example.com> <br>
+       
+       </br>
+  <button onclick="sendClevertap_event()">Submit</button>
 
 </form>
-
+	
+	
+	
 <script type="text/javascript">
 function sendClevertap_event(e) {
 console.log("here");
@@ -72,6 +90,9 @@ console.log("here");
         }
 
 </script>
+	
+		  <button onclick="Clevertap_notification()">Notification</button>
+
 
 <script type="text/javascript">
 	function Clevertap_notification(e) {
