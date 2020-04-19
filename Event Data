@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+  <script type="text/javascript">
+     var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
+
+ // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+clevertap.account.push({"id": "W84-48W-W75Z"});
+clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
+clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agrees to share their IP data
+ (function () {
+		 var wzrk = document.createElement('script');
+		 wzrk.type = 'text/javascript';
+		 wzrk.async = true;
+		 wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+		 var s = document.getElementsByTagName('script')[0];
+		 s.parentNode.insertBefore(wzrk, s);
+  })();
+
+</script>
+	<div class="navbar">
+  <a href="#">Profile Data</a>
+</div>
+
+  <title> This is my first 2 page website </title>
+</head>
+<body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCGQ7djyy8cJPnFHPn2QiaE4iyl7nLWX_4",
+      authDomain: "project-tech-818f5.firebaseapp.com",
+      databaseURL: "https://project-tech-818f5.firebaseio.com",
+      projectId: "project-tech-818f5",
+      storageBucket: "project-tech-818f5.appspot.com",
+      messagingSenderId: "565836208960",
+      appId: "1:565836208960:web:df5097360aa3f88fc0b8a5",
+      measurementId: "G-Q7314FM5S1"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+
+<style>
+	
+body {background-color: White;}
+h1   {color: black;
+		text-align:center}
+        form {text-align:center;
+        }
+	</style>
+
+	
+       <h1>Event Data</h1>
+
+	
+
+	
+<form>
+  <label for="other" style = "font-family:verdana;">Event 1:</label>
+  <input type="text" id="other" placeholder="Button Onclick"> <br>
+  
+  </br>
+	<label for="other" style = "font-family:verdana;">Event 2:</label>
+       <input type="text" id="other" name="other" placeholder="Added to Cart"> <br>
+       
+       </br>
+  <button onclick="sendClevertap_event()">Submit</button>
+
+</form>
+	
+	
+	
+<script type="text/javascript">
+function sendClevertap_event(e) {
+console.log("here");
+        var Event = document.getElementById('other').value;
+        console.log(document.getElementById('other').value);
+
+           clevertap.event.push(Event);
+        }
+
+</script>
+	
+</body>
+</html>
